@@ -1,0 +1,33 @@
+<!doctype html>
+<head>  
+  <title>
+        wido
+  </title>
+</head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+
+<div class=page>
+
+  <h1>wido</h1>
+
+  
+  {% for table in tables %}
+    <br><br>
+    <h2>{{titles[loop.index]}}</h2>
+    <br>
+    <div align="center">
+      {{ table|safe }}
+    </div>
+    {% endfor %}
+
+  <br><br>
+    
+        <a href='/stats'> View stats </a>
+
+        <br><br>
+
+        <a href='/'> Back </a>
+
+</div>

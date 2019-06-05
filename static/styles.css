@@ -1,0 +1,89 @@
+/*
+General styles for text and headers
+*/
+
+body            { font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;}
+a, h1, h2       { color: #E51A4C; }
+h1, h2          { margin: 0; }
+h1              { border-bottom: 2px solid #eee; }
+h2              { font-size: 1.2em; }
+
+/*
+Styles for padding all pages
+*/
+.page           {
+  padding: 100px 200px 200px 200px;
+}
+
+/*
+Styles for submit file input
+*/
+
+input[type="file" i] {
+  background-color: #8AB1BA;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 8px;
+  -webkit-appearance:  cover;
+}
+
+input[type="file" i]:hover {opacity: 1}
+
+
+input[type="submit" i] {
+  background-color: #8AB1BA;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 8px;
+  -webkit-appearance:  cover;
+}
+
+input[type="submit" i]:hover {opacity: 1}
+
+
+/*
+Styles for tables
+*/
+
+table.dataframe, .dataframe th, .dataframe td {
+  border: none;
+  border-bottom: 1px solid #1AE5B3;
+  border-collapse: collapse;
+  text-align:left;
+  padding: 10px;
+  margin-bottom: 40px;
+  font-size: 0.9em;
+}
+
+
+.dataframe th {
+    background-color: #1AE5B3;
+    color: white;
+}
+
+
+/*
+Styles table rows and color while hover
+*/
+tr:nth-child(odd)       { background-color:#eee; }
+tr:nth-child(even)  { background-color:#fff; }
+
+tr:hover            { background-color: #ffdfdf;}

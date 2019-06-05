@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>wido</title>
+</head>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+
+
+<div class=page>
+    <h1>wido</h1>
+
+    <br><br>
+    
+    <h2>Welcome to wido</h2>
+    <br><br>
+    <p> Upload your file(s)</p>
+    <p> (Remember supported extensions: csv, txt, json or xlsx)</p>
+    <p>
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <ul class=flashes>
+            {% for message in messages %}
+              <li>{{ message }}</li>
+            {% endfor %}
+            </ul>
+          {% endif %}
+        {% endwith %}
+    </p>
+    <form method="post" action="/" enctype="multipart/form-data">
+        <dl>
+            <p>
+                <input type="file" name="file" multiple="true" autocomplete="off" required>
+            </p>
+        </dl>
+
+        <p>Company ID <input type = "text" name = "company" required/></p>
+        <p>Separator <input type = "text" name = "separator" /></p>
+
+        <p>
+            <input type="submit" value="Submit">
+        </p>
+    </form>
+
+    <br><br>
+    
+        <a href='/table'> View table </a>
+
+        <br><br>
+
+        <a href='/stats'> View stats and data quality </a>
+    
+    
+</div>
+
+
+</html>
